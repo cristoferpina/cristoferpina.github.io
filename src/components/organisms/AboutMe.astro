@@ -1,0 +1,54 @@
+---
+import perfil from '../../assets/images/perfil.png';
+import logoUniversidad from '../../assets/images/umb.png';
+--- 
+<section id="about" class="bg-linear-to-b from-[#F3E6DF] to-[#F7EEE8] min-h-screen flex items-center py-20">
+    <div class="max-w-6xl mx-auto px-6 w-full">
+        <div class="bg-white/60 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-3">
+            <!-- Columna izquierda: contenido -->
+            <div class="md:col-span-2 p-10 relative">
+                <div class="flex items-start justify-between">
+                    <h3 class="text-3xl font-extrabold tracking-wider uppercase text-[#3B2A20]">Sobre mí</h3>
+                </div>
+
+                <div class="mt-6 text-[#2C3E50] space-y-4">
+                    <p class="text-2xl font-semibold">
+                        Soy estudiante de Ingeniería en Sistemas Computacionales en la Universidad Mexiquense del Bicentenario.
+                    </p>
+
+                    <p class="text-lg italic text-[#4B4B4B]">
+                        Actualmente curso el 7º semestre de Ingeniería en Sistemas Computacionales.
+                    </p>
+
+                    <p class="text-lg text-[#2C3E50]">
+                        Me apasiona la innovación y enfrentar problemáticas desafiantes. Considero que la tecnología es una herramienta poderosa para resolver problemas complejos y mejorar la vida de las personas.
+                    </p>
+
+                    <p class="text-lg text-[#2C3E50]">
+                        Soy una persona proactiva y disfruto trabajar en equipo para lograr objetivos comunes.
+                    </p>
+                </div>
+
+                <div class="mt-8 flex items-center gap-4">
+                    <img src={logoUniversidad.src} alt="Logo Universidad" class="w-20 h-20 object-contain bg-white rounded-lg p-2 shadow"/>
+                    <div>
+                        <h4 class="text-lg font-semibold">Educación</h4>
+                        <p class="text-sm text-[#4B4B4B]">Universidad Mexiquense del Bicentenario — Ingeniería en Sistemas Computacionales</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna derecha: foto y nombre -->
+            <div class="md:col-span-1 bg-linear-to-tr from-[#F2D6BD] to-[#ECD2C1] p-8 flex flex-col items-center justify-center">
+                <div class="relative">
+                    <div class="w-44 h-44 rounded-full bg-white p-1 shadow-xl">
+                        <img src={perfil.src} alt="Cristofer Piña Rodríguez" class="w-full h-full rounded-full object-cover" />
+                    </div>
+                </div>
+
+                <h2 class="mt-6 text-3xl font-extrabold text-[#3B2A20] text-center">Cristofer Piña Rodríguez</h2>
+                <p class="mt-2 text-sm text-[#4B4B4B] text-center">Estudiante · Ingeniería en Sistemas Computacionales</p>
+            </div>
+        </div>
+    </div>
+</section>

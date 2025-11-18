@@ -1,0 +1,43 @@
+---
+import p1 from '../../assets/images/p1.png';
+import p2 from '../../assets/images/p2.png';
+import p3 from '../../assets/images/p3.png';
+---
+
+<section id="projects" class="min-h-screen p-12 bg-[#F7F3F0] text-[#2C3E50]">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-5xl font-bold text-center mb-8">Proyectos</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="bg-white rounded-lg shadow p-6">
+        <img src={p1.src} alt="Casa Inteligente - captura" class="w-full h-40 object-cover rounded mb-4" />
+        <h3 class="text-2xl font-semibold mb-2">Casa Inteligente</h3>
+        <p class="mb-4">Dashboard y páginas estáticas para monitoreo del hogar: login, panel de métricas y registros de video. Base para integrar backend (Flask / Node) y datos en tiempo real.</p>
+        <ul class="list-disc pl-5 text-sm mb-4 space-y-1"></ul>
+        <div class="flex gap-3">
+          <a class="px-4 py-2 border border-[#73433F] text-[#73433F] rounded" href="https://github.com/cristoferpina/Monitoreo-Casa" target="_blank" rel="noopener">Proyecto</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow p-6">
+        <img src={p2.src} alt="Colección de ejercicios prácticos - captura" class="w-full h-40 object-cover rounded mb-4" />
+        <h3 class="text-2xl font-semibold mb-2">Colección de ejercicios prácticos</h3>
+        <p class="mb-4">Paquete de programas didácticos en C++: E/S por consola, estructuras simples y manejo de ficheros. Organizado por ejercicios y listo para compilar por separado.</p>
+        <ul class="list-disc pl-5 text-sm mb-4 space-y-1"></ul>
+        <div class="flex gap-3">
+          <a class="px-4 py-2 border border-[#73433F] text-[#73433F] rounded" href="https://github.com/cristoferpina/c-educative-examples.git" target="_blank" rel="noopener">Proyecto</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow p-6">
+        <img src={p3.src} alt="Seguimiento Egresados UMB - captura" class="w-full h-40 object-cover rounded mb-4" />
+        <h3 class="text-2xl font-semibold mb-2">Seguimiento Egresados UMB</h3>
+        <p class="mb-4">Aplicación Flask para el seguimiento de egresados. Backend en app.py, plantillas Jinja en templates/ y recursos estáticos en static/. Incluye rediseño visual con navbar fija y paleta de colores personalizada.</p>
+        <ul class="list-disc pl-5 text-sm mb-4 space-y-1"></ul>
+        <div class="flex gap-3">
+          <a class="px-4 py-2 border border-[#73433F] text-[#73433F] rounded" href="https://github.com/cristoferpina/control_escolar.git" target="_blank" rel="noopener">Proyecto</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

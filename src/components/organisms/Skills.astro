@@ -1,0 +1,71 @@
+---
+import wifi from '../../assets/images/wifi.png';
+import code from '../../assets/images/code.png';
+import database from '../../assets/images/db.png';
+import frontend from '../../assets/images/frontend.png';
+import tools from '../../assets/images/tools.png';
+import start from '../../assets/images/start.png';
+---
+<section id="skills" class="min-h-screen p-10 bg-[#F4ECE6] text-[#1F2A33]">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-10">Habilidades</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- FRONTEND -->
+      <div class="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-[#73433F] rounded-xl flex items-center justify-center mb-4">
+          <img src={frontend.src} alt="Frontend" class="w-9 h-9" />
+        </div>
+        <h3 class="text-xl font-semibold mb-1">Frontend</h3>
+        <p class="text-base">HTML, CSS, JS, Astro, Tailwind</p>
+      </div>
+
+      <!-- PROGRAMACIÓN -->
+      <div class="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-[#73433F] rounded-xl flex items-center justify-center mb-4">
+          <img src={code.src} alt="Programación" class="w-9 h-9" />
+        </div>
+        <h3 class="text-xl font-semibold mb-1">Programación</h3>
+        <p class="text-base">Python, C++, JS, Algoritmos, Lógica</p>
+      </div>
+
+      <!-- BASES DE DATOS -->
+      <div class="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-[#73433F] rounded-xl flex items-center justify-center mb-4">
+          <img src={database.src} alt="Bases de Datos" class="w-9 h-9" />
+        </div>
+        <h3 class="text-xl font-semibold mb-1">Bases de Datos</h3>
+        <p class="text-base">MySQL, SQL, Modelado</p>
+      </div>
+
+      <!-- REDES -->
+      <div class="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-[#73433F] rounded-xl flex items-center justify-center mb-4">
+          <img src={wifi.src} alt="Redes" class="w-9 h-9" />
+        </div>
+        <h3 class="text-xl font-semibold mb-1">Redes & Electrónica</h3>
+        <p class="text-base">Cisco básico, Redes, Electrónica</p>
+      </div>
+
+      <!-- HERRAMIENTAS -->
+      <div class="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-[#73433F] rounded-xl flex items-center justify-center mb-4">
+          <img src={tools.src} alt="Herramientas" class="w-9 h-9" />
+        </div>
+        <h3 class="text-xl font-semibold mb-1">Herramientas</h3>
+        <p class="text-base">Git, GitHub, Linux, Figma, VS Code</p>
+      </div>
+
+      <!-- HABILIDADES BLANDAS -->
+      <div class="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-[#73433F] rounded-xl flex items-center justify-center mb-4">
+          <img src={start.src} alt="Habilidades blandas" class="w-9 h-9" />
+        </div>
+        <h3 class="text-xl font-semibold mb-1">Habilidades blandas</h3>
+        <p class="text-base">Comunicación, Colaboración, Resolución</p>
+      </div>
+
+    </div>
+  </div>
+</section>

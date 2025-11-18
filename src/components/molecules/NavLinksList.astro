@@ -1,0 +1,16 @@
+---
+import NavLink from "../atoms/NavLink.astro";
+
+const links = [
+    { label: "Inicio", href: "#home" },
+    { label: "Sobre mí", href: "#about" },
+    { label: "Habilidades", href: "#skills" },
+    { label: "Proyectos", href: "#projects" },
+    { label: "Contacto", href: "#contact" },
+];
+---
+<ul class="hidden md:flex space-x-8">
+    {links.map(link => (
+        <NavLink href={link.href} label={link.label} />
+    ))}
+</ul>
