@@ -72,6 +72,14 @@ jobs:
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
+      - name: Include .nojekyll in dist
+        if: always()
+        run: |
+          if [ -f .nojekyll ]; then
+            mkdir -p ${{ env.BUILD_PATH }}/dist
+            cp .nojekyll ${{ env.BUILD_PATH }}/dist/.nojekyll || true
+          fi
+        working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
