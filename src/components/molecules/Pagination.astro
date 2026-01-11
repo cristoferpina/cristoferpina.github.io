@@ -1,0 +1,83 @@
+---
+interface Props {
+    currentPage: number;
+    totalPages: number;
+    baseUrl?: string;
+}
+
+const { currentPage, totalPages, baseUrl = '/blog' } = Astro.props;
+
+const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+
+const getPageUrl = (page: number) => {
+    if (page === 1) return baseUrl;
+    return `${baseUrl}/${page}`;
+};
+---
+
+<nav class="mt-16 flex flex-col items-center gap-6">
+    <!-- Barra divisoria con color primario -->
+    <div class="h-px w-20 bg-[#73433F]/30"></div>
+    
+    <div class="flex items-center gap-2">
+        <!-- Botón Anterior -->
+        {currentPage > 1 ? (
+            <a 
+                href={getPageUrl(currentPage - 1)}
+                class="flex size-10 items-center justify-center rounded-lg border border-[#73433F] text-[#73433F] hover:bg-[#73433F] hover:text-white transition-all"
+                aria-label="Página anterior"
+            >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+            </a>
+        ) : (
+            <span class="flex size-10 items-center justify-center rounded-lg border border-gray-300 text-gray-300 cursor-not-allowed">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+            </span>
+        )}
+
+        <!-- Números de página -->
+        {pages.map((page) => (
+            page === currentPage ? (
+                <span 
+                    class="text-sm font-bold flex size-10 items-center justify-center text-white rounded-lg shadow bg-[#73433F]"
+                >
+                    {page}
+                </span>
+            ) : (
+                <a 
+                    href={getPageUrl(page)}
+                    class="text-sm font-medium flex size-10 items-center justify-center text-[#2C3E50] hover:bg-[#73433F] hover:text-white border border-transparent hover:border-[#73433F] rounded-lg transition-all"
+                >
+                    {page}
+                </a>
+            )
+        ))}
+
+        <!-- Botón Siguiente -->
+        {currentPage < totalPages ? (
+            <a 
+                href={getPageUrl(currentPage + 1)}
+                class="flex size-10 items-center justify-center rounded-lg border border-[#73433F] text-[#73433F] hover:bg-[#73433F] hover:text-white transition-all"
+                aria-label="Página siguiente"
+            >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </a>
+        ) : (
+            <span class="flex size-10 items-center justify-center rounded-lg border border-gray-300 text-gray-300 cursor-not-allowed">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </span>
+        )}
+    </div>
+
+    <p class="text-xs font-mono text-[#2C3E50]/60 uppercase tracking-widest">
+        Mostrando página {currentPage} de {totalPages}
+    </p>
+</nav>

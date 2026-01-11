@@ -1,0 +1,64 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/organisms/Navbar.astro';
+import BlogPost from '../../components/organisms/BlogPost.astro';
+import Pagination from '../../components/molecules/Pagination.astro';
+import type { GetStaticPaths, Page } from 'astro';
+
+interface Frontmatter {
+    title: string;
+    pubDate: string;
+    description: string;
+    author: string;
+    tags?: string[];
+    image?: {
+        url: string;
+        alt: string;
+    };
+}
+
+interface Post {
+    frontmatter: Frontmatter;
+    url?: string;
+}
+
+export const getStaticPaths = (async ({ paginate }) => {
+    const allPosts: Post[] = await Astro.glob('../posts/*.md');
+    const sortedPosts: Post[] = allPosts.sort((a: Post, b: Post) => 
+        new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+    );
+    
+    // Paginación: 3 posts por página
+    return paginate(sortedPosts, { pageSize: 3 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props as { page: Page<Post> };
+---
+
+<Layout title={`Blog - Página ${page.currentPage}`}>
+    <Navbar />
+    <div class="min-h-screen p-6 pt-24">
+        <div class="w-full max-w-6xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold text-center mb-8 glitch" data-text="Blog">
+                Blog
+            </h1>
+            <p class="text-xl text-center mb-12 text-gray-400">
+                Artículos sobre desarrollo web, programación y tecnología
+            </p>
+            
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {page.data.map((post: Post) => (
+                    <BlogPost url={post.url} frontmatter={post.frontmatter} />
+                ))}
+            </div>
+
+            {page.lastPage > 1 && (
+                <Pagination 
+                    currentPage={page.currentPage}
+                    totalPages={page.lastPage}
+                    baseUrl="/blog"
+                />
+            )}
+        </div>
+    </div>
+</Layout>

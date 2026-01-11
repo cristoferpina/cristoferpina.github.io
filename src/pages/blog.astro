@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/organisms/Navbar.astro';
+import BlogPost from '../components/organisms/BlogPost.astro';
+import Pagination from '../components/molecules/Pagination.astro';
+
+interface Frontmatter {
+    title: string;
+    pubDate: string;
+    description: string;
+    author: string;
+    tags?: string[];
+    image?: {
+        url: string;
+        alt: string;
+    };
+}
+
+interface Post {
+    frontmatter: Frontmatter;
+    url?: string;
+}
+
+const allPosts: Post[] = await Astro.glob('./posts/*.md');
+const sortedPosts: Post[] = allPosts.sort((a: Post, b: Post) => 
+    new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+
+// Mostrar solo los primeros 3 posts
+const postsPerPage = 3;
+const firstPagePosts = sortedPosts.slice(0, postsPerPage);
+const totalPages = Math.ceil(sortedPosts.length / postsPerPage);
+---
+
+<Layout title="Blog">
+    <Navbar />
+    <div class="min-h-screen p-6 pt-24">
+        <div class="w-full max-w-6xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold text-center mb-8 glitch" data-text="Blog">
+                Blog
+            </h1>
+            <p class="text-xl text-center mb-12 text-gray-400">
+                Artículos sobre desarrollo web, programación y tecnología
+            </p>
+            
+            {firstPagePosts.length > 0 ? (
+                <>
+                    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        {firstPagePosts.map((post: Post) => (
+                            <BlogPost url={post.url} frontmatter={post.frontmatter} />
+                        ))}
+                    </div>
+
+                    {totalPages > 1 && (
+                        <Pagination 
+                            currentPage={1}
+                            totalPages={totalPages}
+                            baseUrl="/blog"
+                        />
+                    )}
+                </>
+            ) : (
+                <div class="bg-gray-800 p-12 rounded-lg text-center">
+                    <h2 class="text-2xl font-bold mb-4">Próximamente</h2>
+                    <p class="text-gray-300">Los artículos del blog estarán disponibles pronto.</p>
+                </div>
+            )}
+        </div>
+    </div>
+</Layout>

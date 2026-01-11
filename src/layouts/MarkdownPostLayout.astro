@@ -1,0 +1,75 @@
+---
+import Layout from './Layout.astro';
+import Navbar from '../components/organisms/Navbar.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+    <Navbar />
+    <div class="min-h-screen p-6 pt-24" style="background-color: #e8dcc8;">
+        <article class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8 md:p-12">
+            <!-- Header del post -->
+            <header class="mb-8">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+                    {frontmatter.title}
+                </h1>
+                <div class="flex flex-wrap gap-4 text-gray-600 mb-4">
+                    <time datetime={frontmatter.pubDate}>
+                        📅 {new Date(frontmatter.pubDate).toLocaleDateString('es-ES', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        })}
+                    </time>
+                    <span>👤 {frontmatter.author}</span>
+                </div>
+                {frontmatter.tags && (
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        {frontmatter.tags.map((tag: string) => (
+                            <a 
+                                href={`/tags/${tag}`}
+                                class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full text-sm transition-colors"
+                            >
+                                #{tag}
+                            </a>
+                        ))}
+                    </div>
+                )}
+                {frontmatter.image && (
+                    <img 
+                        src={frontmatter.image.url} 
+                        alt={frontmatter.image.alt}
+                        class="w-full rounded-lg mb-6 shadow-md"
+                    />
+                )}
+            </header>
+
+            <!-- Contenido del post -->
+            <div class="prose prose-lg max-w-none
+                prose-headings:text-gray-900 prose-headings:font-bold
+                prose-p:text-gray-700 prose-p:leading-relaxed
+                prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+                prose-strong:text-gray-900 prose-strong:font-bold
+                prose-code:text-pink-600 prose-code:bg-gray-100 prose-code:px-1 prose-code:rounded
+                prose-pre:bg-gray-900 prose-pre:text-gray-100
+                prose-img:rounded-lg prose-img:shadow-lg
+                prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic
+                prose-ul:list-disc prose-ul:text-gray-700
+                prose-ol:list-decimal prose-ol:text-gray-700
+                prose-li:text-gray-700">
+                <slot />
+            </div>
+
+            <!-- Navegación -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <a 
+                    href="/blog"
+                    class="inline-flex items-center text-primary hover:underline transition-colors font-medium"
+                >
+                    ← Volver al blog
+                </a>
+            </div>
+        </article>
+    </div>
+</Layout>

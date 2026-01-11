@@ -1,0 +1,41 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/organisms/Navbar.astro';
+
+const allPosts = await Astro.glob('../posts/*.md');
+const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+const sortedTags = tags.sort();
+---
+
+<Layout title="Tags">
+    <Navbar />
+    <div class="min-h-screen p-6 pt-24 bg-gradient-to-b from-[#F3E6DF] to-[#F7EEE8]">
+        <div class="max-w-4xl mx-auto">
+            <h1 
+                class="text-4xl md:text-6xl font-bold text-center mb-8 text-[#3B2A20] glitch" 
+                data-text="Tags"
+            >
+                Tags
+            </h1>
+
+            <p class="text-xl text-center mb-12 text-[#4B4B4B]">
+                Explora los artículos por categorías
+            </p>
+            
+            <div class="flex flex-wrap gap-4 justify-center">
+                {sortedTags.map((tag) => (
+                    <a 
+                        href={`/tags/${tag}`}
+                        class="px-6 py-3 bg-white/60 backdrop-blur-sm 
+                            hover:bg-white/80 
+                            rounded-xl text-lg 
+                            text-[#3B2A20] 
+                            shadow-lg transition-colors"
+                    >
+                        #{tag}
+                    </a>
+                ))}
+            </div>
+        </div>
+    </div>
+</Layout>
