@@ -1,8 +1,8 @@
 ---
 const { href = "#", label = "" } = Astro.props;
 ---
-<li>
-    <a href={href} class="hover:text-[#D98E73] transition">
+<li class="w-full md:w-auto text-center">
+    <a href={href} class="hover:text-[#D98E73] transition text-2xl md:text-base font-medium block py-2">
         {label}
     </a>
 </li>
