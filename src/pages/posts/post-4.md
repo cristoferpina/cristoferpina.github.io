@@ -3,7 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: "Estancia de Servicio Social en el DIF San José del Rincón"
 pubDate: 2025-04-10
 description: "Experiencia de servicio social en el DIF San José del Rincón enfocada en administración de redes, conectividad institucional y actualización de servidores de transparencia"
-author: "Cristofer Pina"
+author: "Cristofer Piña"
 image:
     url: "/assets/blog/image4.png"
     alt: "Servicio social en el DIF San José del Rincón"
@@ -29,33 +29,33 @@ Durante el servicio social se realizaron las siguientes actividades:
 
 ### Administración de redes
 
-- Supervisión y mantenimiento de la red local
-- Configuración básica de dispositivos de red
-- Diagnóstico y solución de fallas de conectividad
-- Optimización del acceso a recursos compartidos
+- Supervisión y mantenimiento de la red local.
+- Configuración básica de dispositivos de red.
+- Diagnóstico y solución de fallas de conectividad.
+- Optimización del acceso a recursos compartidos.
 
 ### Administración de conectividad institucional
 
-- Gestión de la conectividad entre los distintos departamentos
-- Organización de puntos de acceso y cableado
-- Verificación de la disponibilidad de servicios de red
-- Apoyo en la continuidad operativa de los sistemas
+- Gestión de la conectividad entre los distintos departamentos.
+- Organización de puntos de acceso y cableado.
+- Verificación de la disponibilidad de servicios de red.
+- Apoyo en la continuidad operativa de los sistemas.
 
 ### Actualización y configuración de servidores
 
-- Actualización del **servidor de transparencia**
-- Configuración de servicios orientados a la gestión de procesos
-- Validación del correcto funcionamiento del servidor
-- Apoyo en la administración de servicios internos
+- Actualización del **servidor de transparencia**.
+- Configuración de servicios orientados a la gestión de procesos.
+- Validación del correcto funcionamiento del servidor.
+- Apoyo en la administración de servicios internos.
 
 ## Aprendizajes obtenidos
 
 La estancia permitió fortalecer competencias clave, entre ellas:
 
-- Aplicación práctica de la administración de redes
-- Comprensión del funcionamiento de la infraestructura TI en instituciones públicas
-- Importancia de la seguridad, disponibilidad y confiabilidad de la información
-- Trabajo técnico orientado a la transparencia y eficiencia administrativa
+- Aplicación práctica de la administración de redes.
+- Comprensión del funcionamiento de la infraestructura TI en instituciones públicas.
+- Importancia de la seguridad, disponibilidad y confiabilidad de la información.
+- Trabajo técnico orientado a la transparencia y eficiencia administrativa.
 
 ## Conclusión
 

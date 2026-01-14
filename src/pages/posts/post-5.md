@@ -3,7 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: "Visita transversal al Santuario de la Mariposa Monarca en Sierra Chincua"
 pubDate: 2023-12-05
 description: "Participación de la UES San José del Rincón en una visita transversal al Santuario de la Mariposa Monarca en Sierra Chincua, Michoacán"
-author: "Cristofer Pina"
+author: "Cristofer Piña"
 image:
     url: "/assets/blog/image5.png"
     alt: "Santuario de la Mariposa Monarca en Sierra Chincua"
@@ -27,30 +27,30 @@ La visita transversal permitió a los estudiantes conocer de manera directa uno 
 
 Durante el recorrido se abordaron temas relacionados con:
 
-- Conservación de ecosistemas
-- Biodiversidad y equilibrio ambiental
-- Impacto de las actividades humanas
-- Importancia del turismo sustentable
-- Protección de áreas naturales
+- Conservación de ecosistemas.
+- Biodiversidad y equilibrio ambiental.
+- Impacto de las actividades humanas.
+- Importancia del turismo sustentable.
+- Protección de áreas naturales.
 
 ## Enfoque académico transversal
 
 La actividad se desarrolló bajo un **enfoque transversal**, integrando distintas áreas del conocimiento, tales como:
 
-- Responsabilidad social y ambiental
-- Desarrollo sustentable
-- Educación ambiental
-- Vinculación entre sociedad y naturaleza
-- Conciencia ecológica aplicada al entorno regional
+- Responsabilidad social y ambiental.
+- Desarrollo sustentable.
+- Educación ambiental.
+- Vinculación entre sociedad y naturaleza.
+- Conciencia ecológica aplicada al entorno regional.
 
 ## Aprendizajes obtenidos
 
 A través de esta experiencia, los estudiantes lograron:
 
-- Comprender la relevancia ecológica del Santuario de la Mariposa Monarca
-- Valorar la importancia de la preservación de los recursos naturales
-- Fortalecer la conciencia ambiental
-- Relacionar los contenidos teóricos con un contexto real
+- Comprender la relevancia ecológica del Santuario de la Mariposa Monarca.
+- Valorar la importancia de la preservación de los recursos naturales.
+- Fortalecer la conciencia ambiental.
+- Relacionar los contenidos teóricos con un contexto real.
 
 ## Conclusión
 
