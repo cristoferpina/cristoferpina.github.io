@@ -4,7 +4,9 @@
 
 # Portafolio de Cristofer Piña
 
-Proyecto web personal construido con Astro, React y Tailwind CSS.
+**Mi trabajo, en un solo lugar.**
+
+Un espacio web personal para presentar mi trabajo y seguir construyendo mi identidad como desarrollador.
 
 <img alt="Astro" src="https://img.shields.io/badge/Astro-0F172A?style=for-the-badge" />
 <img alt="React" src="https://img.shields.io/badge/React-1D4ED8?style=for-the-badge" />
@@ -15,6 +17,17 @@ Proyecto web personal construido con Astro, React y Tailwind CSS.
 [Código fuente](https://github.com/cristoferpina/cristoferpina.github.io) &nbsp; / &nbsp; [Incidencias](https://github.com/cristoferpina/cristoferpina.github.io/issues) &nbsp; / &nbsp; [Perfil](https://github.com/cristoferpina)
 
 </div>
+
+## Una mirada al proyecto
+
+| Qué encontrarás | Por qué explorarlo |
+| --- | --- |
+| Mi trabajo, en un solo lugar. | Un espacio web personal para presentar mi trabajo y seguir construyendo mi identidad como desarrollador. |
+| Trabajo de desarrollo | Desarrollo de un sitio con Astro, integración de React y estilos con Tailwind CSS. |
+
+**[Explora cómo está construido →](src/)**
+
+
 
 ---
 
